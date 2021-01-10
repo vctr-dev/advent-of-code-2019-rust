@@ -6,7 +6,10 @@ pub fn solution() {
     for num_str in input_str.split(',') {
         input.push(num_str.parse().unwrap());
     }
-    println!("{:?}", get_noun_and_verb(&input, 19690720));
+    match get_noun_and_verb(&input, 19690720) {
+        Some((noun, verb)) => println!("The number is {}", noun * 100 + verb),
+        None => println!("Did not get any value"),
+    }
 }
 
 fn get_noun_and_verb(intcode: &Vec<u32>, expected: u32) -> Option<(u32, u32)> {
