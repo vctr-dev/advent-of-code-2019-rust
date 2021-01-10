@@ -1,7 +1,7 @@
-use std::fs;
+use super::utils::get_input;
 
 pub fn solution() {
-    let input = fs::read_to_string("./input/day1.txt").unwrap();
+    let input = get_input(1);
     let parsed_lines = input.lines().map(|x| x.parse::<f64>().unwrap());
     let mut module_fuel_total = 0f64;
     let mut fuel_fuel_total = 0f64;
