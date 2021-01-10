@@ -1,7 +1,7 @@
-use std::fs;
+use super::utils::get_input;
 
 pub fn solution() {
-    let input_str = fs::read_to_string("./input/day2.txt").unwrap();
+    let input_str = get_input(2);
     let mut input: Vec<u32> = Vec::new();
     for num_str in input_str.split(',') {
         input.push(num_str.parse().unwrap());
